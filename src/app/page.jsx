@@ -24,6 +24,49 @@ import image3 from '@/images/photos/jacob-scrubs.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
+import {
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  Cog6ToothIcon,
+  FingerPrintIcon,
+  LockClosedIcon,
+  ServerIcon,
+} from '@heroicons/react/20/solid'
+
+const features = [
+  {
+    name: 'Push to deploy.',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: 'SSL certificates.',
+    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    icon: LockClosedIcon,
+  },
+  {
+    name: 'Simple queues.',
+    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus voluptas blanditiis et.',
+    icon: ArrowPathIcon,
+  },
+  {
+    name: 'Advanced security.',
+    description: 'Iure sed ab. Aperiam optio placeat dolor facere. Officiis pariatur eveniet atque et dolor.',
+    icon: FingerPrintIcon,
+  },
+  {
+    name: 'Powerful API.',
+    description: 'Laudantium tempora sint ut consectetur ratione. Ut illum ut rem numquam fuga delectus.',
+    icon: Cog6ToothIcon,
+  },
+  {
+    name: 'Database backups.',
+    description: 'Culpa dolorem voluptatem velit autem rerum qui et corrupti. Quibusdam quo placeat.',
+    icon: ServerIcon,
+  },
+]
+
+
 function MailIcon(props) {
   return (
     <svg
@@ -156,40 +199,90 @@ export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
 
   return (
-    <div className="bg-gray-900">
+    <div className="">
 
-				<Container className="mt-9">
-					<div className="max-w-2xl">
-						<h1 className="text-4xl font-bold tracking-tight text-yellow-400 dark:text-zinc-100 sm:text-5xl">
-							Certified Massage Therapist, Ayurveda Educator, and Dance Choreographer.
-						</h1>
-						<p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-							I’m Jacob, a Licensed Massage Therapist and Ayurvedic practitioner based in Southern California. I’m the Founder of Veda Vida, where we develop and employ methods of massage and bodywork that are rooted in the ancient wisdom of Ayurveda.
+			{/* below container had original margin mt-9 */}
+			<div className="relative isolate overflow-hidden pt-14">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?q=80&w=2830&sat=-40&blend=a1887f&exp=15&blend-mode=multiply&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute inset-0 -z-10 size-full object-cover"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        >
+        </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+              <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+                Get a discount on your first session.{' '}
+                <a href="#" className="font-semibold text-white">
+                  <span aria-hidden="true" className="absolute inset-0" />
+                  Read more <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div className="text-center">
+              <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+               Holistic Wellness for the Modern World
+              </h1>
+              <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+                Boutique mobile wellness services and unique health and wellness products that inspire healthy and happy living, rooted in ancient wisdom and modern science. Experience the Veda Vida difference today.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <a
+                  href="#"
+                  className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                >
+                  Get started
+                </a>
+                <a href="#" className="text-sm/6 font-semibold text-white">
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        >
+        </div>
+      </div>
+
+			<div className="bg-gray-900 py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl lg:mx-0">
+						<h2 className="text-base/7 font-semibold text-indigo-400">Everything you need</h2>
+						<p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+							No server? No problem.
 						</p>
-						<div className="mt-6 flex gap-6">
-							{/* <SocialLink
-								href="https://twitter.com"
-								aria-label="Follow on Twitter"
-								icon={TwitterIcon}
-							/> */}
-							<SocialLink
-								href="https://instagram.com/consciouscreator711"
-								aria-label="Follow on Instagram"
-								icon={InstagramIcon}
-							/>
-							{/* <SocialLink
-								href="https://github.com"
-								aria-label="Follow on GitHub"
-								icon={GitHubIcon}
-							/> */}
-							<SocialLink
-								href="https://linkedin.com/in/jacobdavis711"
-								aria-label="Follow on LinkedIn"
-								icon={LinkedInIcon}
-							/>
-						</div>
+						<p className="mt-6 text-lg/8 text-gray-300">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
+							dolor cupiditate blanditiis.
+						</p>
 					</div>
-				</Container>
+					<dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
+						{features.map((feature) => (
+							<div key={feature.name} className="relative pl-9">
+							{/*
+								<dt className="inline font-semibold text-white">
+									<feature.icon aria-hidden="true" className="absolute left-1 top-1 size-5 text-indigo-500" />
+									{feature.name}
+								</dt>{' '}
+								<dd className="inline">{feature.description}</dd>
+							*/}
+							</div>
+						))}
+					</dl>
+				</div>
+			</div>
+
+
+
+				{/*
 				<Container className="mt-24 md:mt-28">
 					<div className="mx-auto grid max-w-xl grid-cols-1 lg:max-w-none">
 						<div className="flex flex-col gap-16">
@@ -199,6 +292,7 @@ export default async function Home() {
 						</div>
 					</div>
 				</Container>
+				*/}
     </div>
   )
 }
