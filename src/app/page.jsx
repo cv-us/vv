@@ -25,44 +25,50 @@ import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
+  StarIcon,
+  HandRaisedIcon,
+  FireIcon,
+  BookOpenIcon,
+  BeakerIcon,
+  MoonIcon,
 } from '@heroicons/react/20/solid'
 
 const features = [
   {
-    name: 'Push to deploy.',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-    icon: CloudArrowUpIcon,
+    name: 'Massage Therapy.',
+    description: 'Experience personalized massage therapies, from soothing Swedish to transformative Thai, designed to restore balance and relieve stress. Our expert practitioners tailor each session to your unique needs, promoting physical and emotional well-being.',
+		href: '#',
+    icon: HandRaisedIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
+    name: 'Ayurvedic Wellness.',
+    description: 'Embrace holistic health with Ayurvedic consultations and treatments that align your body and mind. From dietary guidance to rejuvenating therapies, our approach honors ancient wisdom for modern lifestyles.',
+		href: '#',
+    icon: BeakerIcon,
   },
   {
-    name: 'Simple queues.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus voluptas blanditiis et.',
-    icon: ArrowPathIcon,
+    name: 'Astrology Readings.',
+    description: 'Unlock insights into your life’s path with personalized astrology readings. Our intuitive approach combines celestial wisdom with practical guidance to empower your personal growth and harmony.',
+		href: '#',
+    icon: StarIcon,
   },
   {
-    name: 'Advanced security.',
-    description: 'Iure sed ab. Aperiam optio placeat dolor facere. Officiis pariatur eveniet atque et dolor.',
-    icon: FingerPrintIcon,
+    name: 'Wellness Workshops.',
+    description: 'Join immersive workshops blending massage techniques, Ayurvedic principles, and astrological insights to deepen your wellness journey. Learn practical tools for balance and growth in a supportive community setting.',
+		href: '#',
+    icon: BookOpenIcon,
   },
   {
-    name: 'Powerful API.',
-    description: 'Laudantium tempora sint ut consectetur ratione. Ut illum ut rem numquam fuga delectus.',
-    icon: Cog6ToothIcon,
+    name: 'Ayurvedic Rituals.',
+    description: 'Experience transformative Ayurvedic rituals, from rejuvenating oil therapies to seasonal cleanses, tailored to restore harmony and vitality. Elevate your daily wellness with ancient practices.',
+		href: '#',
+    icon: FireIcon,
   },
   {
-    name: 'Database backups.',
-    description: 'Culpa dolorem voluptatem velit autem rerum qui et corrupti. Quibusdam quo placeat.',
-    icon: ServerIcon,
+    name: 'Mindfulness Meditation.',
+    description: 'Cultivate inner peace with guided mindfulness meditation sessions, infused with astrological guidance to align your mind and spirit. Perfect for stress relief and personal clarity.',
+		href: '#',
+    icon: MoonIcon,
   },
 ]
 
@@ -255,25 +261,27 @@ export default async function Home() {
 			<div className="bg-gray-900 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl lg:mx-0">
-						<h2 className="text-base/7 font-semibold text-indigo-400">Everything you need</h2>
+						<h2 className="text-base/7 font-semibold text-lime-500">Meet your holistic needs</h2>
 						<p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-							No server? No problem.
+							Get more aqcuainted with yourself.
 						</p>
 						<p className="mt-6 text-lg/8 text-gray-300">
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-							dolor cupiditate blanditiis.
+						Mind body and soul, you are a complex living being and you deserve to fully understand yourself and your existence in the cosmos.
 						</p>
 					</div>
 					<dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
 						{features.map((feature) => (
 							<div key={feature.name} className="relative pl-9">
-							{/*
 								<dt className="inline font-semibold text-white">
-									<feature.icon aria-hidden="true" className="absolute left-1 top-1 size-5 text-indigo-500" />
+									<feature.icon aria-hidden="true" className="absolute left-1 top-1 h-5 w-5 text-lime-500" />
 									{feature.name}
 								</dt>{' '}
 								<dd className="inline">{feature.description}</dd>
-							*/}
+								<p className="mt-6">
+									<a href={feature.href} className="text-sm/6 font-semibold text-lime-500">
+									Learn more <span aria-hidden="true">→</span>
+									</a>
+								</p>
 							</div>
 						))}
 					</dl>
