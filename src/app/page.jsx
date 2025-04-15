@@ -212,7 +212,7 @@ export default async function Home() {
         <img
           alt=""
           src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?q=80&w=2830&sat=-40&blend=a1887f&exp=15&blend-mode=multiply&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="absolute inset-0 -z-10 size-full object-cover"
+          className="absolute inset-0 -z-10 h-screen w-auto object-cover"
         />
         <div
           aria-hidden="true"
@@ -240,7 +240,7 @@ export default async function Home() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  className="rounded-md bg-lime-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
                   Get started
                 </a>
@@ -258,7 +258,7 @@ export default async function Home() {
         </div>
       </div>
 
-			<div className="bg-gray-900 py-24 sm:py-32">
+			<div className="bg-brown-800 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl lg:mx-0">
 						<h2 className="text-base/7 font-semibold text-lime-500">Meet your holistic needs</h2>
