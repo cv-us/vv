@@ -208,10 +208,10 @@ export default async function Home() {
     <div className="">
 
 			{/* below container had original margin mt-9 */}
-			<div className="relative isolate overflow-hidden pt-14">
+			<div className="relative h-screen isolate overflow-hidden pt-14">
         <img
           alt=""
-          src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?q=80&w=2830&sat=-40&blend=a1887f&exp=15&blend-mode=multiply&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?q=80&w=2830&sat=-40&blend=a1887f&exp=15&blend-mode=multiply&auto=format&fit=crop&con=15&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           className="absolute inset-0 -z-10 h-screen w-auto object-cover"
         />
         <div
@@ -234,7 +234,7 @@ export default async function Home() {
               <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
                Holistic Wellness for the Modern World
               </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+              <p className="mt-8 text-pretty text-lg font-medium text-brown-100 text-shadow-lg/30 text-shadow-brown-800 sm:text-xl/8">
                 Boutique mobile wellness services and unique health and wellness products that inspire healthy and happy living, rooted in ancient wisdom and modern science. Experience the Veda Vida difference today.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
