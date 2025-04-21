@@ -222,7 +222,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+              <div className="relative rounded-full px-3 py-1 text-sm/6 text-brown-100 ring-1 ring-white/10 hover:ring-white/20">
                 Get a discount on your first session.{' '}
                 <a href="#" className="font-semibold text-white">
                   <span aria-hidden="true" className="absolute inset-0" />

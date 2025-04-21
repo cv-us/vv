@@ -85,7 +85,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-brown-800 shadow-lg shadow-brown-800/5 ring-1 ring-brown-900/5 backdrop-blur dark:bg-brown-800/90 dark:text-brown-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-brown-800 shadow-lg shadow-brown-800/5 ring-1 ring-brown-900/5 backdrop-blur dark:bg-brown-800/90 dark:text-brown-100 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-brown-500 group-hover:stroke-brown-700 dark:group-hover:stroke-brown-400" />
       </Popover.Button>
@@ -112,13 +112,13 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-brown-900/5 dark:bg-brown-900 dark:ring-brown-800"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
+                <CloseIcon className="h-6 w-6 text-brown-500 dark:text-brown-100" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+              <h2 className="text-sm font-medium text-zinc-600 dark:text-brown-100">
                 Navigation
               </h2>
             </div>
@@ -190,11 +190,11 @@ function ThemeToggle() {
     <button
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : 'Toggle theme'}
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-brown-800/5 ring-1 ring-brown-900/5 backdrop-blur transition dark:bg-brown-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-yellow-50 [@media(prefers-color-scheme:dark)]:stroke-yellow-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-yellow-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-yellow-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-yellow-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-yellow-500" />
+      <SunIcon className="h-6 w-6 fill-brown-100 stroke-brown-500 transition group-hover:fill-brown-200 group-hover:stroke-brown-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-brown-50 [@media(prefers-color-scheme:dark)]:stroke-brown-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-brown-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-brown-600" />
+      <MoonIcon className="hidden h-6 w-6 fill-brown-700 stroke-brown-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-brown-400 [@media_not_(prefers-color-scheme:dark)]:fill-brown-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-brown-500" />
     </button>
   )
 }
@@ -214,7 +214,7 @@ export function Header() {
   let isInitial = useRef(true)
 
   useEffect(() => {
-    let downDelay = avatarRef.current?.offsetTop ?? 0
+    let downDelay = 0
     let upDelay = 64
 
     function setProperty(property, value) {
@@ -282,7 +282,7 @@ export function Header() {
   return (
     <>
       <header
-        className="pointer-events-none relative z-50 flex flex-none flex-col"
+        className="pointer-events-none fixed top-0 left-0 right-0 z-50 flex flex-col"
         style={{
           height: 'var(--header-height)',
           marginBottom: 'var(--header-mb)',
@@ -333,12 +333,6 @@ export function Header() {
           </Container>
         </div>
       </header>
-      {isHomePage && (
-        <div
-          className="flex-none"
-          style={{ height: 'var(--content-offset)' }}
-        />
-      )}
     </>
   )
 }
