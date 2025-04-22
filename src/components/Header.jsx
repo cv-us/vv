@@ -149,13 +149,13 @@ function NavItem({ href, children }) {
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? 'text-yellow-500 dark:text-yellow-400'
-            : 'hover:text-yellow-500 dark:hover:text-yellow-400',
+            ? 'text-lime-500 dark:text-lime-400'
+            : 'hover:text-lime-500 dark:hover:text-lime-400',
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-yellow-500/0 via-yellow-500/40 to-yellow-500/0 dark:from-yellow-400/0 dark:via-yellow-400/40 dark:to-yellow-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-lime-500/0 via-lime-500/40 to-lime-500/0 dark:from-lime-400/0 dark:via-lime-400/40 dark:to-lime-400/0" />
         )}
       </Link>
     </li>
@@ -165,7 +165,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-brown-800 shadow-lg shadow-brown-800/5 ring-1 ring-brown-900/5 backdrop-blur dark:bg-brown-800/90 dark:text-brown-100 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/offerings">Offerings</NavItem>
@@ -194,7 +194,7 @@ function ThemeToggle() {
       onClick={() => setTheme(otherTheme)}
     >
       <SunIcon className="h-6 w-6 fill-brown-100 stroke-brown-500 transition group-hover:fill-brown-200 group-hover:stroke-brown-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-brown-50 [@media(prefers-color-scheme:dark)]:stroke-brown-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-brown-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-brown-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-brown-700 stroke-brown-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-brown-400 [@media_not_(prefers-color-scheme:dark)]:fill-brown-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-brown-500" />
+      <MoonIcon className="hidden h-6 w-6 fill-brown-700 stroke-brown-300 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-brown-400 [@media_not_(prefers-color-scheme:dark)]:fill-brown-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-brown-500" />
     </button>
   )
 }
