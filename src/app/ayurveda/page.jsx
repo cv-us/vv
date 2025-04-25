@@ -32,7 +32,7 @@ export default function Uses() {
   return (
     <SimpleLayout
       title="Ayurveda, its principles, and how it could be of value to you."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      intro="I get asked a lot about why Ayurveda is so important to me, and how it could be of value to you. I’m not a doctor or a practitioner, but I’ve been studying it for years and have found it to be incredibly valuable in my life. I hope this page helps you understand why."
     >
       <div className="space-y-20">
         {/* <ToolsSection title="Workstation">
