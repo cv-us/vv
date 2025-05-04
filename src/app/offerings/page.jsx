@@ -46,7 +46,7 @@ export default function Speaking() {
           />
           <Appearance
             href="/services/"
-            title="Deep Tissue Massage"
+            title="Deep Tissue"
             description="Technique targeting inner muscle layers and connective tissues, relieving pain, stifness, and stress through slow, sustained pressure."
             event="$130 for 60 Minutes"
             cta="Book now"
