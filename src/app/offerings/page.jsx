@@ -39,7 +39,7 @@ export default function Speaking() {
         <ServiceSection title="Massages" href="/services/massage/">
           <Appearance
             href="/services/massage/swedish-massage"
-            title="Swedish Massage"
+            title="Swedish"
             description="A common therapy involving percussion, kneading, vibration, tapping, and rolling to energize the body and improve health."
             event="$130 for 60 Minutes"
             cta="Book now"
