@@ -31,7 +31,7 @@ export const metadata = {
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Ayurveda, its principles, and how it could be of value to you."
+      title="What is Ayurveda, its principles, and how it could be of value to you."
       intro="I get asked a lot about why Ayurveda is so important to me, and how it could be of value to you. I’m not a doctor or a practitioner, but I’ve been studying it for years and have found it to be incredibly valuable in my life. I hope this page helps you understand why."
     >
       <div className="space-y-20">
