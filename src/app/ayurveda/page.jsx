@@ -1,112 +1,225 @@
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
-import { SimpleLayout } from '@/components/SimpleLayout'
+import { Card } from '@/components/Card';
+import { Section } from '@/components/Section';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import { BeakerIcon, UserIcon, EyeIcon, FireIcon, HeartIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
-function ToolsSection({ children, ...props }) {
-  return (
-    <Section {...props}>
-      <ul role="list" className="space-y-16">
-        {children}
-      </ul>
-    </Section>
-  )
-}
-
-function Tool({ title, href, children }) {
-  return (
-    <Card as="li">
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
-      <Card.Description>{children}</Card.Description>
-    </Card>
-  )
-}
+// Sample image placeholders (replace with actual assets)
+import ayurvedaHeroImage from '@/images/ayurveda-hero.jpg';
+import consultationImage from '@/images/consultation.jpg';
+import treatmentImage from '@/images/treatment.jpg';
+import ritualImage from '@/images/ritual.jpg';
 
 export const metadata = {
-  title: 'Uses',
-  description: 'Ayurveda, its principles, and how it could be of value to you.',
-}
+  title: 'Ayurvedic Wellness Services | Veda Vida Southern California',
+  description: 'Discover personalized Ayurvedic consultations, treatments, and rituals at Veda Vida. Book your holistic wellness journey today.',
+};
 
-export default function Uses() {
+const offerings = [
+  {
+    title: 'Consultations',
+    description: 'Personalized sessions to assess your dosha and create a custom wellness plan, including diet and lifestyle guidance.',
+    cta: 'Book a Consultation',
+    href: '/book-now',
+    icon: UserIcon,
+    iconColor: 'text-emerald-500',
+    image: consultationImage,
+    imageAlt: 'Ayurvedic consultation with a practitioner',
+  },
+  {
+    title: 'Treatments',
+    description: 'Rejuvenating therapies like Abhyanga (oil massage) and Shirodhara to restore balance and vitality.',
+    cta: 'Explore Treatments',
+    href: '/services/ayurvedic-wellness#treatments',
+    icon: EyeIcon,
+    iconColor: 'text-amber-600',
+    image: treatmentImage,
+    imageAlt: 'Abhyanga oil massage therapy',
+  },
+  {
+    title: 'Rituals',
+    description: 'Transformative seasonal cleanses and specialized oil therapies for deep healing and renewal.',
+    cta: 'Discover Rituals',
+    href: '/services/ayurvedic-rituals',
+    icon: FireIcon,
+    iconColor: 'text-amber-600',
+    image: ritualImage,
+    imageAlt: 'Ayurvedic seasonal cleanse ritual',
+  },
+];
+
+const testimonials = [
+  {
+    quote: 'My Ayurvedic consultation changed my daily routine for the better!',
+    author: 'S.R.',
+  },
+  {
+    quote: 'The Shirodhara treatment was life-changing and so relaxing.',
+    author: 'M.K.',
+  },
+  {
+    quote: 'Veda Vida’s rituals brought balance to my hectic life.',
+    author: 'J.P.',
+  },
+];
+
+export default function AyurvedicWellness() {
   return (
     <SimpleLayout
-      title="What is Ayurveda, its principles, and how it could be of value to you."
-      intro="I get asked a lot about why Ayurveda is so important to me, and how it could be of value to you. I’m not a doctor or a practitioner, but I’ve been studying it for years and have found it to be incredibly valuable in my life. I hope this page helps you understand why."
+      title="Discover Balance with Ayurvedic Wellness"
+      intro="Embrace personalized consultations, rejuvenating treatments, and ancient rituals to harmonize your body, mind, and spirit."
     >
       <div className="space-y-20">
-        {/* <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
-          </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
-          </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
-          </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
-          </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
-          </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
-          </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
-          </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
-          </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
-          </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
-          </Tool>
-        </ToolsSection> */}
+        {/* Hero Image */}
+        <div className="relative mt-16 sm:mt-20">
+          <Image
+            src={ayurvedaHeroImage}
+            alt="Ayurvedic wellness consultation with herbal remedies"
+            className="w-full h-64 object-cover rounded-2xl"
+            priority
+          />
+          <div className="absolute inset-0 bg-emerald-500/10 rounded-2xl"></div>
+          <a
+            href="/book-now"
+            className="absolute bottom-4 right-4 bg-emerald-500 text-stone-100 px-6 py-3 rounded-lg font-medium hover:bg-emerald-600 transition"
+            aria-label="Schedule an Ayurvedic consultation"
+          >
+            Schedule a Consultation
+          </a>
+        </div>
+
+        {/* What is Ayurveda? */}
+        <Section title="The Science of Life">
+          <div className="space-y-6">
+            <p className="text-stone-300">
+              Ayurveda, a 5,000-year-old system from India, is the science of life, designed to balance body, mind, and spirit. At Veda Vida, we bring this ancient wisdom to modern life through personalized assessments and natural remedies.
+            </p>
+            <ul className="space-y-4 text-stone-300">
+              <li className="flex items-start">
+                <BeakerIcon className="h-6 w-6 text-emerald-500 mr-2" aria-hidden="true" />
+                Personalized dosha assessments (Vata, Pitta, Kapha) to tailor your wellness plan.
+              </li>
+              <li className="flex items-start">
+                <HeartIcon className="h-6 w-6 text-rose-300 mr-2" aria-hidden="true" />
+                Organic, sustainable herbs and oils for safe, eco-friendly treatments.
+              </li>
+              <li className="flex items-start">
+                <EyeIcon className="h-6 w-6 text-amber-600 mr-2" aria-hidden="true" />
+                Integration with massage and astrology for a holistic experience.
+              </li>
+            </ul>
+            <a
+              href="/community/blog/dosha-guide"
+              className="text-rose-300 underline hover:text-rose-400"
+              aria-label="Learn more about your dosha"
+            >
+              Learn More About Your Dosha
+            </a>
+          </div>
+        </Section>
+
+        {/* Our Ayurvedic Offerings */}
+        <Section title="Tailored Ayurvedic Experiences">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {offerings.map((offering) => (
+              <Card key={offering.title} className="bg-stone-800 rounded-xl p-6">
+                <div className="relative h-48 mb-4">
+                  <Image
+                    src={offering.image}
+                    alt={offering.imageAlt}
+                    className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                  />
+                  <offering.icon
+                    className={`absolute top-2 right-2 h-8 w-8 ${offering.iconColor}`}
+                    aria-hidden="true"
+                  />
+                </div>
+                <Card.Title href={offering.href}>{offering.title}</Card.Title>
+                <Card.Description>{offering.description}</Card.Description>
+                <Card.Cta>{offering.cta}</Card.Cta>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        {/* Why Choose Veda Vida? */}
+        <Section title="Your Path to Holistic Harmony">
+          <div className="space-y-6">
+            <p className="text-stone-300">
+              At Veda Vida, our Ayurvedic approach is uniquely tailored to your needs, blending ancient wisdom with modern care.
+            </p>
+            <dl className="space-y-4 text-stone-300">
+              <div className="flex items-start">
+                <dt className="font-semibold mr-2 text-stone-100">Personalization:</dt>
+                <dd>Custom plans based on your dosha, lifestyle, and astrological insights.</dd>
+              </div>
+              <div className="flex items-start">
+                <dt className="font-semibold mr-2 text-stone-100">Sustainability:</dt>
+                <dd>Organic, eco-friendly products reflecting our commitment to the planet.</dd>
+              </div>
+              <div className="flex items-start">
+                <dt className="font-semibold mr-2 text-stone-100">Integration:</dt>
+                <dd>Combining Ayurveda with massage and astrology for comprehensive wellness.</dd>
+              </div>
+            </dl>
+            <a
+              href="/book-now"
+              className="bg-emerald-500 text-stone-100 px-6 py-3 rounded-lg font-medium hover:bg-emerald-600 transition"
+              aria-label="Start your Ayurvedic journey"
+            >
+              Start Your Journey
+            </a>
+          </div>
+        </Section>
+
+        {/* Client Stories */}
+        <Section title="Transformed by Ayurveda">
+          <div className="relative overflow-hidden">
+            <div className="flex space-x-6 snap-x snap-mandatory overflow-x-auto pb-4">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="bg-stone-800 rounded-xl p-6 snap-center min-w-[280px]">
+                  <HeartIcon className="h-6 w-6 text-rose-300 mb-4" aria-hidden="true" />
+                  <Card.Description>{testimonial.quote}</Card.Description>
+                  <p className="mt-2 text-sm text-stone-500">— {testimonial.author}</p>
+                </Card>
+              ))}
+            </div>
+            <a
+              href="/contact"
+              className="mt-6 inline-block text-rose-300 underline hover:text-rose-400"
+              aria-label="Share your Ayurvedic story"
+            >
+              Share Your Story
+            </a>
+          </div>
+        </Section>
+
+        {/* Book Your Ayurvedic Experience */}
+        <Section title="Begin Your Ayurvedic Journey">
+          <div className="space-y-6">
+            <p className="text-stone-300">
+              Ready to restore balance? Book a consultation, treatment, or ritual today.
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="/book-now"
+                className="bg-emerald-500 text-stone-100 px-6 py-3 rounded-lg font-medium hover:bg-emerald-600 transition"
+                aria-label="Book an Ayurvedic service"
+              >
+                Book Now
+              </a>
+              <a
+                href="/book-now#pricing"
+                className="text-rose-300 underline hover:text-rose-400"
+                aria-label="View Ayurvedic pricing"
+              >
+                View Pricing
+              </a>
+            </div>
+          </div>
+        </Section>
       </div>
     </SimpleLayout>
-  )
+  );
 }
