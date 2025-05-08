@@ -91,10 +91,10 @@ export default function AyurvedicWellness() {
         {/* What is Ayurveda? */}
         <Section title="The Science of Life">
           <div className="space-y-6">
-            <p className="text-stone-300">
+            <p className="text brown-600 dark:text-brown-100">
               Ayurveda, a 5,000-year-old system from India, is the science of life, designed to balance body, mind, and spirit. At Veda Vida, we bring this ancient wisdom to modern life through personalized assessments and natural remedies.
             </p>
-            <ul className="space-y-4 text-stone-300">
+            <ul className="space-y-4 text-brown-200">
               <li className="flex items-start">
                 <BeakerIcon className="h-6 w-6 text-emerald-500 mr-2" aria-hidden="true" />
                 Personalized dosha assessments (Vata, Pitta, Kapha) to tailor your wellness plan.
