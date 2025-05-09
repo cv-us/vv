@@ -231,7 +231,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="text-center">
-              <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              <h1 className="text-balance font-amatic text-5xl font-semibold tracking-tight text-white sm:text-7xl">
                Holistic Wellness for the Modern World
               </h1>
               <p className="mt-8 text-pretty text-lg font-medium text-brown-100 text-shadow-lg/30 text-shadow-brown-800 sm:text-xl/8">
