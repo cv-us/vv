@@ -222,7 +222,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm/6 text-brown-100 ring-1 ring-white/10 hover:ring-white/20">
+              <div className="font-unkempt relative rounded-full px-3 py-1 text-sm/6 text-brown-100 ring-1 ring-white/10 hover:ring-white/20">
                 Get a discount on your first session.{' '}
                 <a href="#" className="font-semibold text-white">
                   <span aria-hidden="true" className="absolute inset-0" />
@@ -232,10 +232,10 @@ export default async function Home() {
             </div>
             <div className="text-center">
               <h1 className="text-balance font-amatic text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-               Holistic Wellness for the Modern World
+              Modern Wellness<br />Made Mobile
               </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-brown-100 text-shadow-lg/30 text-shadow-brown-800 sm:text-xl/8">
-                Boutique mobile wellness services and unique health and wellness products that inspire healthy and happy living, rooted in ancient wisdom and modern science. Experience the Veda Vida difference today.
+              <p className="mt-8 text-pretty font-flower text-2xl font-medium text-brown-100 text-shadow-lg/30 text-shadow-brown-800">
+                Boutique mobile wellness services and unique health and wellness products that inspire healthy and happy living, rooted in ancient wisdom and modern science.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
@@ -261,7 +261,7 @@ export default async function Home() {
 			<div className="bg-brown-800 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl lg:mx-0">
-						<h2 className="text-base/7 font-semibold text-lime-500">Meet your holistic needs</h2>
+						<h2 className="text-base/7 font-unkempt font-semibold text-lime-500">Meet your holistic needs</h2>
 						<p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
 							Get more aqcuainted with yourself.
 						</p>
