@@ -59,7 +59,7 @@ module.exports = {
 								body: {fontFamily: 'Annie Use Your Telescope, serif' },
 								h1: {fontFamily: 'Annie Use Your Telescope, serif' },
 								p: {
-									fontFamily: 'Annie Use Your Telescope, serif',
+									fontFamily: 'lora, serif',
 									fontSize: '2xl',
 									},
 								},
